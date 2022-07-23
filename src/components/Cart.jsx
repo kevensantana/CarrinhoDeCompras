@@ -4,11 +4,6 @@ import Controller from './Controller'
 
 function Cart() {
 
-  function Finalizou(){
-    const Ok = "ok"
-    console.log(Ok)
-  }
-
   return(
     <div className="containerCart">
       <h1>Meu carrinho</h1>
@@ -23,8 +18,8 @@ function Cart() {
 
             <div className="info">
                 <h3>{item.name}</h3>
-                <span>{item.price}</span>
-                <p>{item.sellingPrice}</p>
+                <span>{item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>
+                <p>{item.sellingPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
             </div>
 
             <div className='controller'>
